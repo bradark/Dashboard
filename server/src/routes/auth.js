@@ -16,10 +16,10 @@ router.get('/redirect', passport.authenticate('discord', {
 });
 
 router.get('/success',  ensureAuthenticated, (req, res) => {
+    console.log(req.user);
     res.json({
         success: 1,
-        userID: req.user.id,
-        userName: req.user.username,
+        userData: req.user,
     });
 });
 

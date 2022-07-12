@@ -63,3 +63,15 @@ code {
   border: none;
   border-radius: 5px;
 }
+
+.profileCard {
+  justify-content: center;
+  text-align: center;
+  margin: 25px;
+  padding: 25px;
+  background-color: rgb(36,37,38);
+}
+
+.navText {
+  color:white;
+}

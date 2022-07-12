@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import * as ReactBootStrap from "react-bootstrap";
 import Navbar from "../components/Navbar.jsx";
+import ProfileCard from "../components/ProfileCard.jsx";
 import {httpGetUser} from '../hooks/requests';
 
 function Dashboard() {
@@ -23,7 +24,7 @@ function Dashboard() {
               throw new Error("authentication has been failed!");
             })
             .then((resObject) => {
-              setUserName(`USER_ID: ${resObject.userID}`);
+              setUserName(`${resObject.userData.username}`);
             })
             .catch((err) => {
               console.log(err);
@@ -35,7 +36,8 @@ function Dashboard() {
 
     return(
         <div>
-          <h1 className="title">{username}</h1>
+          <Navbar username={username} />
+          <ProfileCard username={username} />
         </div>
     );
 }

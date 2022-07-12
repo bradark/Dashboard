@@ -10,7 +10,7 @@ function Home() {
 
     return(
         <div>
-          <h1 className="title">The #1 Discord Dashboard + Payment System</h1>
+            <Navbar />
           <div className="card">
             <h1 className="title">Login</h1>
             <div className="loginInput">

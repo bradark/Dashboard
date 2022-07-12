@@ -1,13 +1,20 @@
 import React from "react";
 import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
-function MainNavbar() {
+function MainNavbar(props) {
     return (
-      <div>
-        <h1 className="title">DashApp</h1>
-      </div>
+        <Navbar bg="dark" variant="light">
+        <Container>
+          <Navbar.Brand className="navText" href="#home">Navbar with text</Navbar.Brand>
+          <Navbar.Toggle />
+          <Navbar.Collapse className="justify-content-end">
+            <Navbar.Text className="navText">
+              Welcome, {props.username}
+            </Navbar.Text>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
     );
   }
   

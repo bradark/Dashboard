@@ -9,7 +9,7 @@ const discordStrategy = require('./strategies/discord-strat');
 const authRoute = require('./routes/auth');
 
 app.use(cors({
-    origin: "http://localhost:3001", // <-- location of the react app were connecting to
+    origin: "http://localhost:3001", 
     credentials: true,
 }));
 //app.use(express.json());
