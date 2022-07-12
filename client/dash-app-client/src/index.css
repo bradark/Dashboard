@@ -25,3 +25,41 @@ code {
   color: white;
 }
 
+.card {
+  justify-content: center;
+  text-align: center;
+  margin-left: 25px;
+  margin-right: 25px;
+  padding: 25px;
+  background-color: rgb(36,37,38);
+}
+
+.loginInput {
+  margin-top: 10px;
+}
+
+.loginBtnDiv {
+  margin-top: 10px;
+}
+
+.loginBtn {
+  min-width: 170px;
+  padding: 5px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.discordLoginBtnDiv {
+  margin-top: 10px;
+}
+
+.discordLoginBtn {
+  min-width: 170px;
+  padding: 20px;
+  background-color: teal;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
