@@ -10,7 +10,7 @@ function Home() {
 
     return(
         <div>
-            <Navbar />
+        <Navbar />
           <div className="card">
             <h1 className="title">Login</h1>
             <div className="loginInput">

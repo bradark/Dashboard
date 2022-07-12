@@ -7,6 +7,9 @@ import {httpGetUser} from '../hooks/requests';
 function Dashboard() {
 
     const [username, setUserName] = useState("");
+    const [avatar, setAvatar] = useState("");
+    const [userID, setUserID] = useState("");
+    const [email, setEmail] = useState("");
 
     useEffect(() => {
         const getUser = () => {
@@ -25,6 +28,9 @@ function Dashboard() {
             })
             .then((resObject) => {
               setUserName(`${resObject.userData.username}`);
+              setAvatar(`//cdn.discordapp.com/avatars/${resObject.userData.id}/${resObject.userData.avatar}.png`);
+              setUserID(`${resObject.userData.id}`);
+              setEmail(`${resObject.userData.email}`);  
             })
             .catch((err) => {
               console.log(err);
@@ -36,8 +42,13 @@ function Dashboard() {
 
     return(
         <div>
-          <Navbar username={username} />
-          <ProfileCard username={username} />
+          <Navbar username={username} avatar={avatar} />
+          <ProfileCard 
+            username={username} 
+            avatar={avatar} 
+            userID={userID}
+            email={email}
+           />
         </div>
     );
 }
