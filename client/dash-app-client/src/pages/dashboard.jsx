@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import * as ReactBootStrap from "react-bootstrap";
 import Navbar from "../components/Navbar.jsx";
 import ProfileCard from "../components/ProfileCard.jsx";
+import SideNavbar from "../components/SideNavbar.jsx";
 import {httpGetUser} from '../hooks/requests';
 
 function Dashboard() {
@@ -43,12 +44,19 @@ function Dashboard() {
     return(
         <div>
           <Navbar username={username} avatar={avatar} />
-          <ProfileCard 
-            username={username} 
-            avatar={avatar} 
-            userID={userID}
-            email={email}
-           />
+          <div class="row">
+            <SideNavbar />
+            <div class="col-9">
+                <div class="container">
+                    <ProfileCard 
+                        username={username} 
+                        avatar={avatar} 
+                        userID={userID}
+                        email={email}
+                    />
+                </div>
+            </div>
+           </div>
         </div>
     );
 }

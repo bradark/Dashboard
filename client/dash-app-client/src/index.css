@@ -102,3 +102,21 @@ code {
 .profileDetailText {
   color: white;
 }
+
+.col {
+  text-align: top;
+  min-height: 1000px;
+}
+
+.sideNav {
+  padding: 25px;
+  text-align: left;
+}
+
+.nav-link {
+  color: white;
+}
+
+.nav {
+  min-height: 1000px;
+}
