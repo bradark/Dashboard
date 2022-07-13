@@ -3,7 +3,8 @@ import React from 'react';
 import { BrowserRouter as Router,
   Routes,
   Route, } from "react-router-dom"
-import Dashboard from "./pages/dashboard.jsx";
+import Dashboard from "./pages/dashboard";
+import Payments from "./pages/payments"
 import Home from "./pages/home.jsx";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/profile" element={<Dashboard />}></Route>
+          <Route path="/payments" element={<Payments />}></Route>
           <Route path="/home" element={<Home />}></Route>
         </Routes>
       </Router>

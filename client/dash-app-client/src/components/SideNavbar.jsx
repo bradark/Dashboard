@@ -26,7 +26,7 @@ function SideNavbar(props) {
                             </div>
                             <div className="navItemChildDiv">
                             <span>
-                                <a class ="nav-link" href="#"> Profile </a>
+                                <a class ="nav-link" href="/profile"> Profile </a>
                             </span>
                             </div>
                         </div>

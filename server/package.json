@@ -17,6 +17,7 @@
     "express-session": "^1.17.3",
     "mongoose": "^6.4.4",
     "passport": "^0.6.0",
-    "passport-discord": "^0.1.4"
+    "passport-discord": "^0.1.4",
+    "stripe": "^9.13.0"
   }
 }
