@@ -8,16 +8,52 @@ function SideNavbar(props) {
             <nav class ="navbar bg-dark sideNav">
                 <ul class ="nav navbar-nav">
                     <li class ="nav-item">
-                    <a class ="nav-link" href="#"> Dashboard </a>
+                        <div className="navItemParDiv">
+                            <div className="navItemChildDiv">
+                                <i class="gg-timer"></i>
+                            </div>
+                            <div className="navItemChildDiv">
+                            <span>
+                                <a class ="nav-link" href="#"> Dashboard </a>
+                            </span>
+                            </div>
+                        </div>
                     </li>
                     <li class ="nav-item">
-                    <a class ="nav-link" href="#"> Users </a>
+                        <div className="navItemParDiv">
+                            <div className="navItemChildDiv">
+                                <i class="gg-user"></i>
+                            </div>
+                            <div className="navItemChildDiv">
+                            <span>
+                                <a class ="nav-link" href="#"> Profile </a>
+                            </span>
+                            </div>
+                        </div>
                     </li>
                     <li class ="nav-item">
-                    <a class ="nav-link" href="#"> Payments </a>
+                        <div className="navItemParDiv">
+                            <div className="navItemChildDiv">
+                                <i class="gg-credit-card"></i>
+                            </div>
+                            <div className="navItemChildDiv">
+                            <span>
+                                <a class ="nav-link" href="/payments"> Payments </a>
+                            </span>
+                            </div>
+                        </div>
                     </li>
                     <li class ="nav-item">
-                    <a class ="nav-link" href="#"> About </a>
+                        <div className="navItemParDiv">
+                            <div className="navItemChildDiv">
+                                <i class="gg-toolbox"></i>
+                            </div>
+                            <div className="navItemChildDiv">
+                            <span>
+                                <a class ="nav-link" href="#"> Settings </a>
+                            </span>
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </nav>

@@ -8,7 +8,7 @@ router.get('/', passport.authenticate('discord'));
 
 router.get('/redirect', passport.authenticate('discord', {
     //failureRedirect: '/auth/forbidden',
-    successRedirect: 'http://localhost:3001/dashboard'
+    successRedirect: 'http://localhost:3001/profile'
 }), (req, res) => {
     res.json({
         success: 1

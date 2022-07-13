@@ -1,3 +1,10 @@
+@import url('https://css.gg/user.css');
+@import url('https://css.gg/drive.css');
+@import url('https://css.gg/credit-card.css');
+@import url('https://css.gg/album.css');
+@import url('https://css.gg/timer.css');
+@import url('https://css.gg/toolbox.css');
+
 body {
   background-color: rgb(48,49,52);
   margin: 0;
@@ -28,6 +35,7 @@ code {
 .card {
   justify-content: center;
   text-align: center;
+  margin-top: 25px;
   margin-left: 25px;
   margin-right: 25px;
   padding: 25px;
@@ -81,7 +89,7 @@ code {
 .navImg {
   max-width: 40px;
   max-height: 40px;
-  border-radius: 10px;
+  border-radius: 25px;
   margin-left: 10px;
 }
 
@@ -105,6 +113,8 @@ code {
 
 .col {
   text-align: top;
+  padding-top: 25px;
+  max-width: 250px;
   min-height: 1000px;
 }
 
@@ -119,4 +129,44 @@ code {
 
 .nav {
   min-height: 1000px;
+}
+
+.gg-drive{
+  color: white;
+}
+
+.gg-user {
+  color: white;
+}
+
+.gg-credit-card {
+  color: white;
+}
+
+.gg-album {
+  color: white;
+}
+
+.gg-timer {
+  color: white;
+}
+
+.gg-toolbox {
+  color: white;
+}
+
+.navItemParDiv {
+  margin: 1rem;
+  text-align: left;
+}
+
+.navItemChildDiv {
+  display: inline-block;
+  padding-left: 1rem;
+  vertical-align: middle;
+}
+
+.navBrandImg {
+  max-height: 50px;
+  padding: 10px;
 }
