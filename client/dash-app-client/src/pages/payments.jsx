@@ -108,6 +108,9 @@ function Payments() {
                                 <h1 className="payInfo">New Users</h1>
                             </div>
                         </div>
+                        <div className="payItemChildDiv  payRecentPaymentsCard">
+                            <h1 className="payInfo">Recent Payments</h1>
+                        </div>
                     </div>
                 </div>
             </div>

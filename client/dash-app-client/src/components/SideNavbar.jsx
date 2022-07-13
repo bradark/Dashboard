@@ -46,6 +46,30 @@ function SideNavbar(props) {
                     <li class ="nav-item">
                         <div className="navItemParDiv">
                             <div className="navItemChildDiv">
+                                <i class="gg-tag"></i>
+                            </div>
+                            <div className="navItemChildDiv">
+                            <span>
+                                <a class ="nav-link" href="#"> Products </a>
+                            </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class ="nav-item">
+                        <div className="navItemParDiv">
+                            <div className="navItemChildDiv">
+                                <i class="gg-bot"></i>
+                            </div>
+                            <div className="navItemChildDiv">
+                            <span>
+                                <a class ="nav-link" href="#"> Discord Bot </a>
+                            </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class ="nav-item">
+                        <div className="navItemParDiv">
+                            <div className="navItemChildDiv">
                                 <i class="gg-toolbox"></i>
                             </div>
                             <div className="navItemChildDiv">

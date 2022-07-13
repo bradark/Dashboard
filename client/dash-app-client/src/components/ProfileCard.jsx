@@ -1,6 +1,15 @@
 import React from "react";
 
 function ProfileCard(props) {
+
+    async function handleLogout(event){
+        window.open('http://localhost:3001/home', "_blank") //to open new page
+    }
+
+    async function handleReconnect(event){
+        window.open('https://discord.com/api/oauth2/authorize?client_id=995494000607899669&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fauth%2Fredirect&response_type=code&scope=identify%20email%20guilds', "_blank") //to open new page
+    }
+
     return (
       <div>
         <div className="profileCard">
@@ -18,7 +27,7 @@ function ProfileCard(props) {
                         <div className="profileItemParDiv">
                             <div className="profileItemChildDiv">
                                 <div className="payItemParDiv">
-                                <button className="conStripeBtn">
+                                <button onClick={handleReconnect} className="conStripeBtn">
                                     <div className="payItemChildDiv">
                                             Reconnect Discord 
                                     </div>
@@ -30,7 +39,7 @@ function ProfileCard(props) {
                             </div>
                             <div className="payItemChildDivRight">
                                 <div className="payItemParDiv">
-                                <button className="monetizeServBtn">
+                                <button onClick={handleLogout} className="monetizeServBtn">
                                     <div className="payItemChildDiv">
                                             Logout 
                                     </div>

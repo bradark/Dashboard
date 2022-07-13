@@ -7,6 +7,8 @@
 @import url('https://css.gg/link.css');
 @import url('https://css.gg/arrow-top-right.css');
 @import url('https://css.gg/arrow-bottom-right-r.css');
+@import url('https://css.gg/bot.css');
+@import url('https://css.gg/tag.css');
 
 body {
   background-color: rgb(48,49,52);
@@ -159,7 +161,8 @@ code {
   text-align: top;
   padding-top: 1px;
   max-width: 250px;
-  min-height: 1000px;
+  min-height: 500px;
+  border-radius: 25px;
 }
 
 .sideNav {
@@ -172,43 +175,11 @@ code {
 }
 
 .nav {
-  min-height: 1000px;
+  min-height: 975px;
 }
 
-.gg-drive{
-  color: white;
-}
-
-.gg-user {
-  color: white;
-}
-
-.gg-credit-card {
-  color: white;
-}
-
-.gg-album {
-  color: white;
-}
-
-.gg-timer {
-  color: white;
-}
-
-.gg-toolbox {
-  color: white;
-}
-
-.gg-link {
-  color:white
-}
-
-.gg-arrow-top-right {
-  color:white
-}
-
-.gg-arrow-bottom-right-r {
-  color:white
+i {
+  color:white;
 }
 
 .navItemParDiv {
@@ -282,6 +253,15 @@ code {
   min-height: 250px;
   min-width:335px;
   margin-left: 25px;
+  border-radius: 10px;
+}
+
+.payRecentPaymentsCard {
+  background-color: rgb(48,49,52);
+  margin:25px;
+  padding:10px;
+  min-height: 375px;
+  min-width:95%;
   border-radius: 10px;
 }
 
