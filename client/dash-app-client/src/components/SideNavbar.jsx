@@ -6,6 +6,8 @@ function SideNavbar(props) {
     return (
         <div class="col">
             <nav class ="navbar bg-dark sideNav">
+            <h1 className="navTitle">Dash App</h1>
+            <p className="profileDetailText">Logged in: {props.username}</p> <img className="navImg" src={props.avatar}/>
                 <ul class ="nav navbar-nav">
                     <li class ="nav-item">
                         <div className="navItemParDiv">

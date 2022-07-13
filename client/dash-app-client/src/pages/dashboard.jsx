@@ -43,9 +43,8 @@ function Dashboard() {
 
     return(
         <div>
-          <Navbar username={username} avatar={avatar} />
           <div class="row">
-            <SideNavbar />
+            <SideNavbar username={username} avatar={avatar}/>
             <div class="col-9">
                 <div class="container">
                     <ProfileCard 
