@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const server = 'localhost:27017';
+const server = '0.0.0.0:27017';
 const db = 'dash_app';
 
 class Database {
@@ -14,6 +14,7 @@ class Database {
            console.log('Database connection successful')
          })
          .catch(err => {
+           console.log(err);
            console.error('Database connection error')
          })
     }

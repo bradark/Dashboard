@@ -14,7 +14,7 @@ function Dashboard() {
 
     useEffect(() => {
         const getUser = () => {
-          fetch("http://localhost:3000/auth/success", {
+          fetch("http://localhost:3000/auth/getUserData", {
             method: "GET",
             credentials: "include",
             headers: {
@@ -28,10 +28,10 @@ function Dashboard() {
               throw new Error("authentication has been failed!");
             })
             .then((resObject) => {
-              setUserName(`${resObject.userData.username}`);
-              setAvatar(`//cdn.discordapp.com/avatars/${resObject.userData.id}/${resObject.userData.avatar}.png`);
-              setUserID(`${resObject.userData.id}`);
-              setEmail(`${resObject.userData.email}`);  
+              setUserName(`${resObject.username}`);
+              setAvatar(`//cdn.discordapp.com/avatars/${resObject.discordID}/${resObject.avatar}.png`);
+              setUserID(`${resObject.discordID}`);
+              //setEmail(`${resObject.userData.email}`);  
             })
             .catch((err) => {
               console.log(err);

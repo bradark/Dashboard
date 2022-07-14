@@ -26,6 +26,16 @@ const User = new mongoose.Schema({
         type: mongoose.SchemaTypes.String,
         required: true,
     },
+    stripeRefreshToken: {
+        type: mongoose.SchemaTypes.String,
+        required: true,
+        default: 'NOT_CONNECTED',
+    },
+    stripeUserID: {
+        type: mongoose.SchemaTypes.String,
+        required: true,
+        default: 'NOT_CONNECTED',
+    },
     createdAt: {
        type: mongoose.SchemaTypes.Date,
        required: true,

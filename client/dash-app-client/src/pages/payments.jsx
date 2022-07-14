@@ -10,6 +10,7 @@ function Payments() {
     const [username, setUserName] = useState("");
     const [avatar, setAvatar] = useState("");
     const [userID, setUserID] = useState("");
+    const [stripeID, setStripeID] = useState("");
     const [email, setEmail] = useState("");
 
     async function handleStripeConnect(event){
@@ -18,7 +19,7 @@ function Payments() {
 
     useEffect(() => {
         const getUser = () => {
-          fetch("http://localhost:3000/auth/success", {
+          fetch("http://localhost:3000/auth/getUserData", {
             method: "GET",
             credentials: "include",
             headers: {
@@ -32,10 +33,11 @@ function Payments() {
               throw new Error("authentication has been failed!");
             })
             .then((resObject) => {
-              setUserName(`${resObject.userData.username}`);
-              setAvatar(`//cdn.discordapp.com/avatars/${resObject.userData.id}/${resObject.userData.avatar}.png`);
-              setUserID(`${resObject.userData.id}`);
-              setEmail(`${resObject.userData.email}`);  
+              setUserName(`${resObject.username}`);
+              setAvatar(`//cdn.discordapp.com/avatars/${resObject.discordID}/${resObject.avatar}.png`);
+              setUserID(`${resObject.discordID}`);
+              setStripeID(`${resObject.stripeUserID}`);
+              //setEmail(`${resObject.userData.email}`);  
             })
             .catch((err) => {
               console.log(err);
@@ -56,11 +58,12 @@ function Payments() {
                     <div className="payItemDiv">
                         <div className="payItemParDiv">
                             <div className="payItemChildDiv">
-                                <img className="navImg" src={avatar}/>
+                                <img className="payImg" src={avatar}/>
                             </div>
                             <div className="payItemChildDiv">
                                 <h1 className="payInfo">Username: {username}</h1>
                                 <h1 className="payInfo">ID: {userID}</h1>
+                                <h1 className="payInfo">STRIPE: <span className="payItemStripeID">{stripeID}</span></h1>
                             </div>
                             <div className="payItemChildDivRight">
                                 <div className="payItemParDiv">

@@ -1,8 +1,8 @@
 const stripe = require('stripe')('sk_test_51KdYUGFBmlpVwXKRngPEOtZ9SkOVTyVrfymcdLN4uaQVsz0FQtTuGq6JqNH52CvjXPtdjnmqcAllQm0mFrFCVXbS00hIAE8QgW');
 const httpBuildQuery = require('http-build-query');
 var path = require('path');
-const userModel = require(path.resolve('../server/src/models/users/user.js'));
-const db = require(path.resolve('../server/src/database/database'));
+const userModel = require('../../../server/src/models/users/User');
+const db = require('../../../server/src/database/database');
 
 const index = (req, res) => {
 	const queryData = {
@@ -16,6 +16,7 @@ const index = (req, res) => {
 }
 
 const redirect = async (req, res) => {
+	console.log(req);
 	if (req.query.error) {
 		req.flash('error', req.query.error.error_description)
 		return res.redirect('/');
@@ -31,7 +32,7 @@ const redirect = async (req, res) => {
 		req.flash('error', account.error)
 		return res.redirect('/');
 	}
-    res.redirect('http:localhost:3001/profile');
+    res.redirect(`http:localhost:3000/auth/updateProfile?refresh_token=${token.refresh_token}&stripe_user_id=${token.stripe_user_id}`);
     console.log(account);
     console.log(token);
 	//res.json({ account: account });

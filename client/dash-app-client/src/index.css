@@ -78,7 +78,7 @@ code {
 }
 
 .conStripeBtn {
-  min-width: 200px;
+  min-width: 175px;
   padding: 5px;
   background-color: rgb(88,101,242);
   color: white;
@@ -87,7 +87,7 @@ code {
 }
 
 .monetizeServBtn {
-  min-width: 200px;
+  min-width: 175px;
   padding: 5px;
   background-color: rgb(21, 158, 85);
   color: white;
@@ -96,7 +96,7 @@ code {
 }
 
 .gotoStripeBtn {
-  min-width: 200px;
+  min-width: 175px;
   padding: 5px;
   background-color: rgb(115, 22, 186);
   color: white;
@@ -275,6 +275,10 @@ i {
   text-align: center;
 }
 
+.payItemStripeID {
+  color: rgb(88,101,242);
+}
+
 .profileItemDiv {
   margin:25px;
   padding:10px;
@@ -296,4 +300,9 @@ i {
 
 li div div a:hover{
  color: rgb(116, 119, 128) !important;
+}
+
+.payImg {
+  max-width: 100px;
+  border-radius: 25px;
 }
