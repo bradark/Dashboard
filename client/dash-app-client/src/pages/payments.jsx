@@ -12,6 +12,10 @@ function Payments() {
     const [userID, setUserID] = useState("");
     const [email, setEmail] = useState("");
 
+    async function handleStripeConnect(event){
+        window.open('https://connect.stripe.com/oauth/v2/authorize?response_type=code&client_id=ca_LKCwIu14HeaPZ1oBK4nuo0H3Pe3MGOPc&scope=read_write&redirect_uri=https://localhost:3002/stripe/redirect', "_blank") //to open new page
+    }
+
     useEffect(() => {
         const getUser = () => {
           fetch("http://localhost:3000/auth/success", {
@@ -60,7 +64,7 @@ function Payments() {
                             </div>
                             <div className="payItemChildDivRight">
                                 <div className="payItemParDiv">
-                                <button className="conStripeBtn">
+                                <button onClick={handleStripeConnect} className="conStripeBtn">
                                     <div className="payItemChildDiv">
                                             Connect Stripe 
                                     </div>
