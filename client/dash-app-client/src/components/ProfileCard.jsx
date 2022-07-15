@@ -27,7 +27,7 @@ function ProfileCard(props) {
                         <div className="profileItemParDiv">
                             <div className="profileItemChildDiv">
                                 <div className="payItemParDiv">
-                                <button onClick={handleReconnect} className="conStripeBtn">
+                                <button onClick={handleReconnect} className="recDiscordBtn">
                                     <div className="payItemChildDiv">
                                             Reconnect Discord 
                                     </div>
@@ -39,7 +39,7 @@ function ProfileCard(props) {
                             </div>
                             <div className="payItemChildDivRight">
                                 <div className="payItemParDiv">
-                                <button onClick={handleLogout} className="monetizeServBtn">
+                                <button onClick={handleLogout} className="logoutBtn">
                                     <div className="payItemChildDiv">
                                             Logout 
                                     </div>

@@ -47,8 +47,36 @@ code {
   background-color: rgb(36,37,38);
 }
 
+.homeBrandTitle {
+  padding-top: 50px;
+  font-weight: 700;
+  color: white;
+}
+
+.loginContainer {
+  justify-content: center;
+  text-align: center;
+  margin-top: 25px;
+  margin-left: 35%;
+  padding: 25px;
+}
+
+.loginCard {
+  justify-content: center;
+  max-width: 500px;
+  text-align: center;
+  margin-top: 25px;
+  margin-left: 25px;
+  margin-right: 25px;
+  padding: 25px;
+  background-color: rgb(36,37,38);
+  border-radius: 25px;
+}
+
 .loginInput {
   margin-top: 10px;
+  border-radius: 2px;
+  border: none;
 }
 
 .loginBtnDiv {
@@ -56,7 +84,7 @@ code {
 }
 
 .loginBtn {
-  min-width: 170px;
+  min-width: 185px;
   padding: 5px;
   background-color: green;
   color: white;
@@ -69,8 +97,8 @@ code {
 }
 
 .discordLoginBtn {
-  min-width: 170px;
-  padding: 20px;
+  min-width: 185px;
+  padding: 15px;
   background-color: rgb(88,101,242);
   color: white;
   border: none;
@@ -81,6 +109,24 @@ code {
   min-width: 175px;
   padding: 5px;
   background-color: rgb(88,101,242);
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.recDiscordBtn {
+  min-width: 200px;
+  padding: 5px;
+  background-color: rgb(88,101,242);
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.logoutBtn {
+  min-width: 200px;
+  padding: 5px;
+  background-color: rgb(235, 64, 52);
   color: white;
   border: none;
   border-radius: 5px;
@@ -114,6 +160,26 @@ code {
   border-radius: 5px;
 }
 
+.dashboardCard {
+  justify-content: center;
+  text-align: center;
+  min-height: 1000px;
+  margin: 25px;
+  padding: 25px;
+  background-color: rgb(36,37,38);
+  border-radius: 5px;
+}
+
+.dashCard {
+  justify-content: center;
+  min-width: 560px;
+  padding: 10px;
+  min-height: 250px;
+  text-align: center;
+  background-color: rgb(48,49,52);;
+  border-radius: 5px;
+}
+
 .paymentCard {
   justify-content: center;
   text-align: center;
@@ -133,6 +199,9 @@ code {
   max-height: 40px;
   border-radius: 25px;
   margin-left: 10px;
+  border: 0.2rem;
+  border-style:solid;
+  border-color: rgb(21, 158, 85);
 }
 
 .sidebysideContainer {
@@ -148,9 +217,11 @@ code {
 .profileCardImg {
   border-style:bold;
   border-width: 10px;
-  border-color: rgb(115, 22, 186);
   border-radius: 100px;
   margin-top: -45px;
+  border: 0.5rem;
+  border-style:solid;
+  border-color: rgb(48,49,52);
 }
 
 .profileDetailText {
@@ -211,6 +282,17 @@ i {
 .payItemChildDiv {
   display: inline-block;
   padding-left: 1rem;
+  vertical-align: middle;
+}
+
+.dashItemParDiv {
+  margin: 1rem;
+  text-align: center;
+}
+
+.dashItemChildDiv {
+  display: inline-block;
+  padding:10px;
   vertical-align: middle;
 }
 
@@ -304,5 +386,5 @@ li div div a:hover{
 
 .payImg {
   max-width: 100px;
-  border-radius: 25px;
+  border-radius: 20px;
 }

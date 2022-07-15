@@ -11,19 +11,22 @@ function Home() {
     return(
         <div>
         <Navbar />
-          <div className="card">
+        <h1 className="homeBrandTitle">The #1 Discord Monetization Platform</h1>
+        <div className="loginContainer">
+          <div className="loginCard">
             <h1 className="title">Login</h1>
-            <div className="loginInput">
-                <input placeholder="Username..."></input>
+            <div>
+                <input className="loginInput" placeholder="Username..."></input>
             </div>
-            <div className="loginInput">
-                <input placeholder="Password..."></input>
+            <div>
+                <input className="loginInput" placeholder="Password..."></input>
             </div>
             <div className="loginBtnDiv">
                 <button className="loginBtn">Login</button>
             </div>
             <div className="discordLoginBtnDiv">
                 <button onClick={handleSubmit} className="discordLoginBtn">Login With Discord</button>
+            </div>
             </div>
           </div>
         </div>

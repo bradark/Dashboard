@@ -1,10 +1,11 @@
 import React, {useState, useEffect} from "react";
 import * as ReactBootStrap from "react-bootstrap";
+import Navbar from "../components/Navbar.jsx";
+import ProfileCard from "../components/ProfileCard.jsx";
 import SideNavbar from "../components/SideNavbar.jsx";
 import {httpGetUser} from '../hooks/requests';
-import Dash from "../components/Dash.jsx";
 
-function Dashboard() {
+function Products() {
 
     const [username, setUserName] = useState("");
     const [avatar, setAvatar] = useState("");
@@ -46,7 +47,7 @@ function Dashboard() {
             <SideNavbar username={username} avatar={avatar}/>
             <div class="col-9">
                 <div class="container">
-                    <Dash username={username} userID={userID} avatar={avatar} />
+                
                 </div>
             </div>
            </div>
@@ -54,4 +55,4 @@ function Dashboard() {
     );
 }
 
-export default Dashboard;
+export default Products;

@@ -16,7 +16,7 @@ function SideNavbar(props) {
                             </div>
                             <div className="navItemChildDiv">
                             <span>
-                                <a class ="nav-link" href="#"> Dashboard </a>
+                                <a class ="nav-link" href="/dashboard"> Dashboard </a>
                             </span>
                             </div>
                         </div>
@@ -52,7 +52,7 @@ function SideNavbar(props) {
                             </div>
                             <div className="navItemChildDiv">
                             <span>
-                                <a class ="nav-link" href="#"> Products </a>
+                                <a class ="nav-link" href="/products"> Products </a>
                             </span>
                             </div>
                         </div>
@@ -64,7 +64,7 @@ function SideNavbar(props) {
                             </div>
                             <div className="navItemChildDiv">
                             <span>
-                                <a class ="nav-link" href="#"> Discord Bot </a>
+                                <a class ="nav-link" href="/discordbot"> Discord Bot </a>
                             </span>
                             </div>
                         </div>
@@ -76,7 +76,7 @@ function SideNavbar(props) {
                             </div>
                             <div className="navItemChildDiv">
                             <span>
-                                <a class ="nav-link" href="#"> Settings </a>
+                                <a class ="nav-link" href="/settings"> Settings </a>
                             </span>
                             </div>
                         </div>
