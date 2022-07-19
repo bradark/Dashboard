@@ -3,6 +3,7 @@ import * as ReactBootStrap from "react-bootstrap";
 import Navbar from "../components/Navbar.jsx";
 import ProfileCard from "../components/ProfileCard.jsx";
 import SideNavbar from "../components/SideNavbar.jsx";
+import DiscordBotComp from "../components/DiscordBot";
 import {httpGetUser} from '../hooks/requests';
 
 function DiscordBot() {
@@ -47,7 +48,7 @@ function DiscordBot() {
             <SideNavbar username={username} avatar={avatar}/>
             <div class="col-9">
                 <div class="container">
-                
+                  <DiscordBotComp username={username} avatar={avatar}/>
                 </div>
             </div>
            </div>

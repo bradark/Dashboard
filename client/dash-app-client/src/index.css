@@ -123,6 +123,16 @@ code {
   border-radius: 5px;
 }
 
+.conDisServerBtn {
+  min-width: 200px;
+  margin: 10px;
+  padding: 5px;
+  background-color: rgb(88,101,242);
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
 .logoutBtn {
   min-width: 200px;
   padding: 5px;
@@ -169,6 +179,17 @@ code {
   background-color: rgb(36,37,38);
   border-radius: 5px;
 }
+
+.discordCard {
+  justify-content: center;
+  text-align: center;
+  min-height: 1000px;
+  margin: 25px;
+  padding: 25px;
+  background-color: rgb(36,37,38);
+  border-radius: 5px;
+}
+
 
 .dashCard {
   justify-content: center;
