@@ -27,7 +27,7 @@ function Dash(props) {
                     <div className="payItemChildDivRight">
                         <button className="conDisServerBtn">
                             <div className="payItemChildDiv">
-                                            Connect Server 
+                                Connect Server 
                             </div>
                             <div className="payItemChildDiv">
                                 <i class="gg-link"></i>
@@ -35,7 +35,6 @@ function Dash(props) {
                         </button>
                     </div>
                 </div>
-                
             </div>
             <div className="payItemDiv">
                 <div className="payItemParDiv">
