@@ -10,6 +10,7 @@ import Home from "./pages/home.jsx";
 import DiscordBot from './pages/discordbot';
 import Products from './pages/products';
 import Settings from './pages/settings'
+import Servers from './pages/servers'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/products" element={<Products/>}></Route>
           <Route path="/discordbot" element={<DiscordBot/>}></Route>
           <Route path="/settings" element={<Settings/>}></Route>
+          <Route path="/servers" element={<Servers/>}></Route>
         </Routes>
       </Router>
     </div>

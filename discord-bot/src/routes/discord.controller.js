@@ -1,4 +1,4 @@
-const {Client, Intents} = require('discord.js');
+const {Client, Intents, PermissionsBitField } = require('discord.js');
 const token = 'OTk1NDk0MDAwNjA3ODk5NjY5.Gs9PKf.N7Fr5A95vPxV6XOSwaVOa7LX3EoyM7iRv6y9YE';
 const allIntents = new Intents(32767);
 // [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_PRESENCES, Intents.FLAGS.GUILD_MEMBERS]
@@ -18,8 +18,22 @@ async function getAllUsers() {
         guild.members.fetch().then((members) => {
             let users = [];
             members.forEach(member => {
-                users.push({user: `${member.user.username}#${member.user.discriminator}`});
+                console.log(member);
+                let memRoles = [];
+                member._roles.forEach(role => {
+                    memRoles.push({
+                        roleID: role,
+                    });
+                });    
+                users.push({
+                    user: `${member.user.username}#${member.user.discriminator}`,
+                    userID: member.user.id,
+                    userAvatar: member.user.avatar,
+                    userAvatarLink: `//cdn.discordapp.com/avatars/${member.user.id}/${member.user.avatar}.png`,
+                    roles: memRoles,
+                });            
             })
+            console.log(users);
             resolve(users);
         }).catch((err) => {
             reject(err);
@@ -96,6 +110,39 @@ async function createInviteLink() {
     });
 }
 
+async function checkUserRole(roleID) {
+    const guild = await client.guilds.fetch(serverID);
+    return new Promise((resolve, reject) => {
+        guild.members.fetch(lilCpapID).then((mem) => {
+            let hasRole = false;
+            mem._roles.forEach((role) => {
+                if(roleID == role){
+                    hasRole = true;
+                }
+            });
+            resolve(hasRole);
+        });
+    });
+}
+
+async function getUserRoles() {
+    const guild = await client.guilds.fetch(serverID);
+    return new Promise((resolve, reject) => {
+        guild.members.fetch(lilCpapID).then((mem) => {
+            resolve(mem._roles);
+        })
+    });
+}
+
+async function checkUserPermissions() {
+    const guild = await client.guilds.fetch(serverID);
+    return new Promise((resolve, reject) => {
+        guild.members.fetch(lilCpapID).then((mem) => {
+            resolve(mem.permissions.toArray());
+        })
+    });
+}
+
 async function login() {
     await client.login(token);
 }
@@ -113,4 +160,7 @@ module.exports = {
     giveUserRole,
     takeUserRole,
     createInviteLink,
+    checkUserRole,
+    getUserRoles,
+    checkUserPermissions,
 }

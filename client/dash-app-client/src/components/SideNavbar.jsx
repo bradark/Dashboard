@@ -60,6 +60,18 @@ function SideNavbar(props) {
                     <li class ="nav-item">
                         <div className="navItemParDiv">
                             <div className="navItemChildDiv">
+                                <i class="gg-server"></i>
+                            </div>
+                            <div className="navItemChildDiv">
+                            <span>
+                                <a class ="nav-link" href="/servers"> Servers </a>
+                            </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class ="nav-item">
+                        <div className="navItemParDiv">
+                            <div className="navItemChildDiv">
                                 <i class="gg-bot"></i>
                             </div>
                             <div className="navItemChildDiv">

@@ -4,7 +4,10 @@ const { getAllUsers,
         takeUserRole,
         createInviteLink, 
         getAllChannels,
-           } = require('./discord.controller');
+        checkUserRole,
+        getUserRoles,
+        checkUserPermissions,
+        } = require('./discord.controller');
 const router = require('express').Router();
 
 router.get('/getAllUsers', async (req, res) => {
@@ -48,5 +51,29 @@ router.get('/takeUserRole', async (req, res) => {
         });
     })
 });
+
+router.get('/checkUserRole', async (req, res) => {
+    await checkUserRole(req.query.id).then((result) => {
+        res.json({
+            hasID: result
+        });
+    });
+});
+
+router.get('/getUserRoles', async (req, res) => {
+    await getUserRoles().then((result) => {
+        res.json({
+            roles: result
+        })
+    })
+})
+
+router.get('/checkUserPermissions', async (req, res) => {
+    await checkUserPermissions().then((result) => {
+        res.json({
+            permissions: result
+        });
+    });
+})
 
 module.exports = router;
