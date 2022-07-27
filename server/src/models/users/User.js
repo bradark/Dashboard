@@ -26,6 +26,10 @@ const User = new mongoose.Schema({
         type: mongoose.SchemaTypes.String,
         required: true,
     },
+    adminedServers: {
+        type: mongoose.SchemaTypes.Array,
+        required: true,
+    },
     stripeRefreshToken: {
         type: mongoose.SchemaTypes.String,
         required: true,

@@ -17,7 +17,16 @@ passport.use(new DiscordStrategy({
     callbackURL: 'http://localhost:3000/auth/redirect',
     scope: ['identity', 'email', 'guilds'],
 }, async (accessToken, refreshToken, profile, done) => {
-    console.log(profile);
+    var adminedServers = [];
+    profile.guilds.forEach((guild) => {
+        if(guild.permissions == 2147483647){
+            adminedServers.push({
+                guildName: guild.name,
+                guildID: guild.id
+            });
+        }
+    });
+    console.log(adminedServers);
     var user = new userModel({
         discordID: profile.id,
         username: profile.username,
@@ -25,6 +34,7 @@ passport.use(new DiscordStrategy({
         discriminator: profile.discriminator,
         accessToken: profile.accessToken,
         refreshToken: refreshToken,
+        adminedServers: adminedServers,
     }) 
     user.save(function(err, result){
         if(err){
